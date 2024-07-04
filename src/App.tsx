@@ -1,6 +1,4 @@
 import { useMemo, useEffect, useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
 import { DateTime } from "luxon";
 
@@ -105,14 +103,14 @@ function App() {
 
   return (
     <div
-      class={`w-full h-full flex items-center justify-center ${bgColorClass}`}
+      className={`w-full h-full flex items-center justify-center ${bgColorClass}`}
     >
-      <div class="max-w-md m-4">
+      <div className="max-w-md m-4">
         {" "}
-        <h1 class="mb-8 text-4xl font-bold text-center">
+        <h1 className="mb-8 text-4xl font-bold text-center">
           {percentage < 100 ? (
             <div className="flex items-center gap-1">
-              <div class="lds-spinner scale-75 -ml-4">
+              <div className="lds-spinner scale-75 -ml-4">
                 <div></div>
                 <div></div>
                 <div></div>
@@ -133,9 +131,9 @@ function App() {
           )}
         </h1>
         {/* <div>Percentage: {percentage}%</div> */}
-        <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700">
+        <div className="w-full bg-gray-200 rounded-full dark:bg-gray-700">
           <div
-            class={`text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full ${progressBackgroundColorClass}`}
+            className={`text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full ${progressBackgroundColorClass}`}
             style={{ width: `${percentage}%` }}
           >
             {" "}
