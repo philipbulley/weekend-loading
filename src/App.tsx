@@ -99,7 +99,7 @@ function App() {
 
   const bgColorClass = percentage < 100 ? "bg-gray-800" : "bg-pink-500";
   const progressBackgroundColorClass =
-    percentage < 100 ? "bg-blue-600" : "bg-yellow-400 text-black";
+    percentage < 100 ? "bg-blue-600" : "bg-yellow-400 text-gray-900";
 
   return (
     <div
@@ -107,7 +107,7 @@ function App() {
     >
       <div className="max-w-md m-4">
         {" "}
-        <h1 className="mb-8 text-4xl font-bold text-center">
+        <h1 className="mb-8 text-2xl font-bold text-center">
           {percentage < 100 ? (
             <div className="flex items-center gap-1">
               <div className="lds-spinner scale-75 -ml-4">
