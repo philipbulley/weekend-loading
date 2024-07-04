@@ -105,7 +105,7 @@ function App() {
     <div
       className={`w-full h-full flex items-center justify-center ${bgColorClass}`}
     >
-      <div className="max-w-md m-4">
+      <div className="max-w-md -mt-40">
         {" "}
         <h1 className="mb-8 text-2xl font-bold text-center">
           {percentage < 100 ? (
