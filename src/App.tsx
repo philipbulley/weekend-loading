@@ -1,4 +1,4 @@
-import { useMemo, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import { DateTime } from "luxon";
 
@@ -82,11 +82,7 @@ const calculate = () => {
 };
 
 function App() {
-  const { percentage: initialPercentage } = useMemo(
-    () => calculate(),
-    [calculate]
-  );
-  const [percentage, setPercentage] = useState(initialPercentage);
+  const [percentage, setPercentage] = useState(() => calculate().percentage);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -95,7 +91,7 @@ function App() {
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [calculate]);
+  }, []);
 
   const bgColorClass = percentage < 100 ? "bg-gray-800" : "bg-pink-500";
   const progressBackgroundColorClass =
